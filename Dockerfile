@@ -52,4 +52,5 @@ COPY . .
 EXPOSE 80
 
 # Run the application.
-CMD python3 ./Flask.py
+# CMD python3 ./Flask.py
+CMD [ "Flask", "run", "--host=0.0.0.0", "--port=3000"]
