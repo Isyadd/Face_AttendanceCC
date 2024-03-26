@@ -52,4 +52,4 @@ COPY . .
 EXPOSE 80
 
 # Run the application.
-CMD python3 ./Main.py
+CMD python3 ./Flask.py
