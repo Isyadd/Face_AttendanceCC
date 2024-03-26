@@ -21,6 +21,10 @@ WORKDIR /app
 # Create a non-privileged user that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
 ARG UID=10001
+RUN apt-get update
+
+COPY requirements.txt .
+
 RUN adduser \
     --disabled-password \
     --gecos "" \
