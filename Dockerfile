@@ -51,7 +51,5 @@ COPY . .
 # Expose the port that the application listens on.
 EXPOSE 8000
 
-RUN yarn install --ignore-engines
-
 # Run the application.
 CMD python3 ./Main.py
