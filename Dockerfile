@@ -22,6 +22,7 @@ WORKDIR /app
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
 ARG UID=10001
 RUN apt-get update && apt-get install -y build-essential cmake
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 COPY requirements.txt .
 
@@ -52,5 +53,5 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-CMD python3 ./Main.py
-# CMD [ "Flask", "run", "--host=0.0.0.0", "--port=8000"]
+# CMD python3 ./Main.py
+CMD [ "Flask", "run", "--host=0.0.0.0", "--port=8000"]

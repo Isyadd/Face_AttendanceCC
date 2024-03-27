@@ -70,5 +70,5 @@ def get_ip():
     return ip_address
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True, host='127.0.0.1', port=8000)
+    socketio.run(app, debug=True, host='0.0.0.0', port=8000)
     print(f"Flask app can be accessed at http://{get_ip()}:8000")
